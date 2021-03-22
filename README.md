@@ -1,4 +1,4 @@
-# This is Team 8thdays.
+# Welcome to Team 8thdays!!!
 
 We are working together to create a website to display the top ten clubs in the premier league and other information such as Premier League Table. Users are able to see information about players, management of each clubs.
 
