@@ -10,13 +10,7 @@ namespace WebAppFootballClubs.Controllers
     {
         public ActionResult Index()
         {
-            HomePage homePage = new homePage()
-            {
-                Headline = "Phew what a scorcher", 
-                ByLine = "Ron Journo",
-                Content = "People are obsessed with the weather";
-
-            return View(homePage);
+            return View();
         }
 
         public ActionResult About()
