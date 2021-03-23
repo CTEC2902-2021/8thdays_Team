@@ -14,9 +14,9 @@ namespace WebAppFootballClubs.Controllers
         {
             HomePage homePage = new HomePage()
             {
-                Headline = "Phew what a scorcher",
-                ByLine = "Ron Journo",
-                Content = "People are obsessed with the weather"
+                Headline = "Guide to Premier League",
+                ByLine = "Powered by:",
+                Content = "8thdays_Team"
             };
             return View(homePage);
         }
