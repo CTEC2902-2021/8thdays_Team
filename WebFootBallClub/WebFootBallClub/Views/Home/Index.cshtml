@@ -12,66 +12,89 @@
     <link href="~/Content/realsite.css" rel="stylesheet" />
     <link href="~/Content/PFGeneral.css" rel="stylesheet" />
 </head>
-<body>
-   
-</body>
-<div class="jumbotron">
-    <table>
-        <thead>
-            <tr>
-                <th scope="col">Rank</th>
-                <th scope="col">Club Name</th>
-                <th scope="col">MP</th>
-                <th scope="col">W</th>
-                <th scope="col">D</th>
-                <th scope="col">L</th>
-                <th scope="col">GF</th>
-                <th scope="col">GA</th>
-                <th scope="col">GD</th>
-                <th scope="col">PTS</th>
 
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model != null && Model.Count > 0)
-            {
-                foreach (var item in Model)
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#navbarSupportedContent" aria-controls="navbarSupportedContent" ariaexpanded="false" aria-label="Toggle navigation"></button>
+        @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new
+       { @class = "navbar-brand" })
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item">
+                    @Html.ActionLink("Home", "Index", "Home", null,
+    new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("About", "About", "Home", null,
+    new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Contact", "Contact", "Home",
+        null, new { @class = "nav-link" })
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="main">
+    <div class="container">
+        <h1>Quick preview of Premier League</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">Club Name</th>
+                    <th scope="col">MP</th>
+                    <th scope="col">W</th>
+                    <th scope="col">D</th>
+                    <th scope="col">L</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">GA</th>
+                    <th scope="col">GD</th>
+                    <th scope="col">PTS</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Count > 0)
                 {
-                    <tr>
-                        <th scope="row">@item.ID</th>
-                        <td>@item.Name</td>
-                        <td>@item.Win</td>
-                        <td>@item.Draw</td>
-                        <td>@item.Lose</td>
-                        <td>@item.GF</td>
-                        <td>@item.GA</td>
-                        <td>@item.GD</td>
-                        <td>@item.Pts</td>
-                    </tr>
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.ID</th>
+                            <td>@item.Name</td>
+                            <td>@item.Win</td>
+                            <td>@item.Draw</td>
+                            <td>@item.Lose</td>
+                            <td>@item.GF</td>
+                            <td>@item.GA</td>
+                            <td>@item.GD</td>
+                            <td>@item.Pts</td>
+                        </tr>
+                    }
                 }
-            }
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Premier League</h2>
+                <p>
+                    Click the link below to see more Premier League data
+                </p>
+                <p><a class="btn btn-default" href="https://www.bbc.com/sport/football/premier-league/table">View &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Watch games</h2>
+                <p>Watch match videos and latest news here</p>
+                <p><a class="btn btn-default" href="https://www.bbc.com/sport/football/premier-league">View &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Most popular players</h2>
+                <p>See more player tables favorite player here</p>
+                <p><a class="btn btn-default" href="https://www.bbc.com/sport/football/premier-league/top-scorers">View &raquo;</a></p>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
