@@ -1,11 +1,57 @@
-﻿@{
+﻿@model List<WebFootBallClub.Models.TeamsView>
+@{
     ViewBag.Title = "Home Page";
+    Layout = null;
 }
 
+
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/realsite.css" rel="stylesheet" />
+    <link href="~/Content/PFGeneral.css" rel="stylesheet" />
+</head>
+<body>
+   
+</body>
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Club Name</th>
+                <th scope="col">MP</th>
+                <th scope="col">W</th>
+                <th scope="col">D</th>
+                <th scope="col">L</th>
+                <th scope="col">GF</th>
+                <th scope="col">GA</th>
+                <th scope="col">GD</th>
+                <th scope="col">PTS</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.ID</th>
+                        <td>@item.Name</td>
+                        <td>@item.Win</td>
+                        <td>@item.Draw</td>
+                        <td>@item.Lose</td>
+                        <td>@item.GF</td>
+                        <td>@item.GA</td>
+                        <td>@item.GD</td>
+                        <td>@item.Pts</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
 </div>
 
 <div class="row">
