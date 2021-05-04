@@ -7,7 +7,7 @@ using WebFootBallClub.Models;
 
 namespace WebFootBallClub.Controllers
 {
-    public interface Database
+    public interface DataInterface
     {
         List<TeamsView> getAllTeams();
         List<Player> getTeamPlayers(int TeamId);

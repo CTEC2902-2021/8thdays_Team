@@ -173,9 +173,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PremierLeagueController.cs" />
-    <Compile Include="Controllers\TeamPlayersController.cs" />
-    <Compile Include="Controllers\Database.cs" />
-    <Compile Include="Controllers\TeamsViewController.cs" />
+    <Compile Include="Controllers\DataInterface.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

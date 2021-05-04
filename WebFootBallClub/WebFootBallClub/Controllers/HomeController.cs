@@ -9,29 +9,30 @@ namespace WebFootBallClub.Controllers
 {
     public class HomeController : Controller
     {
-        Database TeamsView = new PremierLeagueController();
+        DataInterface TeamsView = new PremierLeagueController();
         public ActionResult Index()
         {
             return View(TeamsView.getAllTeams());
         }
 
-        public ActionResult TeamPlayer (int ID)
+        public ActionResult Player (int ID)
         {
 
-            return View(getTeamPlayers(ID));
+            return View(TeamsView.getTeamPlayers(ID));
 
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.Message1 = "Quick preview of Premier League";
+            ViewBag.Message2 = "Team:8thdays";
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message1 = "LeBron:";
+            ViewBag.Message2 = "Wechat: LeBronJu_Wechat";
 
             return View();
         }

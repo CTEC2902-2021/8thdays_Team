@@ -8,7 +8,7 @@ using WebFootBallClub.Controllers;
 
 namespace WebFootBallClub.Controllers
 {
-    public class PremierLeagueController : Database
+    public class PremierLeagueController : DataInterface
     {
         public List<TeamsView> Team = new List<TeamsView>();
         public List<Player> Players = new List<Player>();
