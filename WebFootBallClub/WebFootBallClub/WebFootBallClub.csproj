@@ -349,7 +349,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Players\" />
-    <Folder Include="Views\TeamView\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
