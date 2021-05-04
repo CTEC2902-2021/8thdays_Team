@@ -16,7 +16,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#navbarSupportedContent" aria-controls="navbarSupportedContent" ariaexpanded="false" aria-label="Toggle navigation"></button>
-        @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new
+        @Html.ActionLink("WebFootballApp", "Index", "Home", new { area = "" }, new
        { @class = "navbar-brand" })
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav mr-auto">
@@ -63,6 +63,7 @@
                         <tr>
                             <th scope="row">@item.ID</th>
                             <td>@item.Name</td>
+
                             <td>@item.MP</td>
                             <td>@item.Win</td>
                             <td>@item.Draw</td>

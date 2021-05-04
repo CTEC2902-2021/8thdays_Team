@@ -31,7 +31,6 @@ namespace WebFootBallClub.Controllers
             Team.Add(new TeamsView() { ID = 9, Name = "Leeds United", MP = 33, Win = 14, Draw = 5, Lose = 14, GF = 50, GA = 50, GD = 0, Pts = 47 });
 
             Team.Add(new TeamsView() { ID = 10, Name = "Arsenal", MP = 33, Win = 13, Draw = 7, Lose = 13, GF = 44, GA = 37, GD = 7, Pts = 46 });
-
         }
 
         public List<TeamsView> getAllTeams()
