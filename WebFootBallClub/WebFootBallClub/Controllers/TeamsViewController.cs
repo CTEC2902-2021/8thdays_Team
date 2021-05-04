@@ -7,7 +7,7 @@ using WebFootBallClub.Models;
 
 namespace WebFootBallClub.Controllers
 {
-    public class TeamsViewsController : Teams
+    public class TeamsViewsController : Database
     {
         public List<TeamsView> Team = new List<TeamsView>();
         public TeamsViewsController()
