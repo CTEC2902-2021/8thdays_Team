@@ -8,9 +8,10 @@ namespace WebFootBallClub.Controllers
 {
     public class HomeController : Controller
     {
+        Teams TeamsView = new TeamsViewsController();
         public ActionResult Index()
         {
-            return View();
+            return View(TeamsView.getAllTeams());
         }
 
         public ActionResult About()
