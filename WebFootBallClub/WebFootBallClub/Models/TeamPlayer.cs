@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebFootBallClub.Models
 {
-    public class Players
+    public class Player
     {
         public int ID { get; set; }
         public int TeamId { get; set; }

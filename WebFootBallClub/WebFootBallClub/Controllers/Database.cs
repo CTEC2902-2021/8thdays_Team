@@ -10,5 +10,7 @@ namespace WebFootBallClub.Controllers
     public interface Database
     {
         List<TeamsView> getAllTeams();
+        List<Player> getTeamPlayers(int TeamId);
+        string getTeamName(int TeamId);
     }
 }

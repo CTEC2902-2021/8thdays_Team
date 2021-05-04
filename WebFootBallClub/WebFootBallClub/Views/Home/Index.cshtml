@@ -43,10 +43,10 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Rank</th>
-                    
-                    <th scope="col">Club Name</th>
-                    
+                    <th scope="col">Rank & Name</th>
+
+                    <th scope="col">Logo</th>
+
                     <th scope="col">MP</th>
                     <th scope="col">W</th>
                     <th scope="col">D</th>
@@ -55,6 +55,7 @@
                     <th scope="col">GA</th>
                     <th scope="col">GD</th>
                     <th scope="col">PTS</th>
+                    <th scope="col">Team Member Detail</th>
                 </tr>
             </thead>
             <tbody>
@@ -63,9 +64,9 @@
                     foreach (var item in Model)
                     {
                 <tr>
-                    <th scope="row">@item.ID<img height="30" width="30" src="~/Image/@(item.ID+ ".PNG")" /></th>                   
-                    <td>@item.Name</td>
-                    
+                    <th scope="row">@item.ID. @item.Name</th>
+                    <td><img height="40" width="45" src="~/Image/@(item.ID+ ".PNG")" /></td>
+
                     <td>@item.MP</td>
                     <td>@item.Win</td>
                     <td>@item.Draw</td>
@@ -74,6 +75,7 @@
                     <td>@item.GA</td>
                     <td>@item.GD</td>
                     <td>@item.Pts</td>
+                    <td><a href="~/Views/Home/PlayerView/@item.ID">Click here</a></td>
                 </tr>
                     }
                 }

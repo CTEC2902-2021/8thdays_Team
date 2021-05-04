@@ -1,7 +1,7 @@
-﻿@model List<WebFootBallClub.Models.TeamsView>
+﻿@model List<WebFootBallClub.Models.Player>
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Players detail";
     Layout = null;
 }
 
@@ -44,16 +44,15 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Rank</th>
-                    <th scope="col">Club Name</th>
-                    <th scope="col">MP</th>
-                    <th scope="col">W</th>
-                    <th scope="col">D</th>
-                    <th scope="col">L</th>
-                    <th scope="col">GF</th>
-                    <th scope="col">GA</th>
-                    <th scope="col">GD</th>
-                    <th scope="col">PTS</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Goals</th>
+                    <th scope="col">Assists</th>
+                    <th scope="col">Played</th>
+                    <th scope="col">Total Shots</th>
+                    <th scope="col">Goal Conversion</th>
+                    <th scope="col">Shot</th>
+                    <th scope="col">Shot Accuracy</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -62,16 +61,14 @@
                     foreach (var item in Model)
                     {
                         <tr>
-                            <th scope="row">@item.ID<img height="30" width="30" src="~/Image/@(item.ID+ ".PNG")" /></th>
+                            <th scope="row">@item.ID</th>
                             <td>@item.Name</td>
-                            <td>@item.MP</td>
-                            <td>@item.Win</td>
-                            <td>@item.Draw</td>
-                            <td>@item.Lose</td>
-                            <td>@item.GF</td>
-                            <td>@item.GA</td>
-                            <td>@item.GD</td>
-                            <td>@item.Pts</td>
+                            <td>@item.Goals</td>
+                            <td>@item.Assist</td>
+                            <td>@item.Played</td>
+                            <td>@item.TotalShots</td>
+                            <td>@item.GoalConversion</td>
+                            <td>@item.ShotAccuracy</td>
                         </tr>
                     }
                 }
