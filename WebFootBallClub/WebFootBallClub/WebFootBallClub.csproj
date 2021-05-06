@@ -178,7 +178,6 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Players.cs" />
     <Compile Include="Models\TeamsView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -345,8 +344,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Players\" />
-    <Folder Include="Views\TeamView\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
